@@ -546,7 +546,7 @@ export RETPOLINE_VDSO_CFLAGS
 KBUILD_CFLAGS += -mllvm -polly \
 				-mllvm -polly-run-inliner \
 				-mllvm -polly-run-dce \
-				-mllvm -polly-opt-fusion=max \
+				-mllvm --polly-position=max \
 				-mllvm -polly-vectorizer=stripmine
 
 KBUILD_CFLAGS	+= $(call cc-option,-fno-PIE)
